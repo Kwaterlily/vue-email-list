@@ -1,4 +1,5 @@
-// generare 10 indirizzi email e stamparli in pagina all’interno di una lista.
+// Generare 10 indirizzi email e stamparli in pagina all’interno di una lista.
+
 const app = new Vue({
     el: "#app",
     data: {

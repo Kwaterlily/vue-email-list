@@ -10,17 +10,18 @@
 </head>
 <body>
     <div id="app" class="container">
-        <ul class="row justify-content-center py-5">
-            <li class="col-6 ">Primo indirizzo email: {{ primoIndirizzoEmail }}</li>
-            <li class="col-6 ">Secondo indirizzo email: {{ secondoIndirizzoEmail }}</li>
-            <li class="col-6 ">Terzo indirizzo email: {{ terzoIndirizzoEmail }}</li>
-            <li class="col-6 ">Quarto indirizzo email: {{ quartoIndirizzoEmail }}</li>
-            <li class="col-6 ">Quinto indirizzo email: {{ quintoIndirizzoEmail }}</li>
-            <li class="col-6 ">Sesto indirizzo email: {{ sestoIndirizzoEmail }}</li>
-            <li class="col-6 ">Settimo indirizzo email: {{ settimoindirizzoEmail }}</li>
-            <li class="col-6 ">Ottavo indirizzo email: {{ ottavoIndirizzoEmail }}</li>
-            <li class="col-6 ">Nono indirizzo email: {{ nonoIndirizzoEmail }}</li>
-            <li class="col-6 ">Decimo indirizzo email: {{ decimoIndirizzoWmail }}</li>
+        <ul class="row py-5">
+            <!-- Far comparire gli indirizzi email solamente quando sono stati tutti generati. -->
+            <li v-if="primoIndirizzoEmail" style="list-style-type: none;">Primo indirizzo email: {{ primoIndirizzoEmail }}</li><br>
+            <li v-if="secondoIndirizzoEmail" style="list-style-type: none;">Secondo indirizzo email: {{ secondoIndirizzoEmail }}</li><br>
+            <li v-if="terzoIndirizzoEmail"  style="list-style-type: none;">Terzo indirizzo email: {{ terzoIndirizzoEmail }}</li><br>
+            <li v-if="quartoIndirizzoEmail"  style="list-style-type: none;">Quarto indirizzo email: {{ quartoIndirizzoEmail }}</li><br>
+            <li v-if="quintoIndirizzoEmail"  style="list-style-type: none;">Quinto indirizzo email: {{ quintoIndirizzoEmail }}</li><br>
+            <li v-if="sestoIndirizzoEmail"  style="list-style-type: none;">Sesto indirizzo email: {{ sestoIndirizzoEmail }}</li><br>
+            <li v-if="settimoindirizzoEmail"  style="list-style-type: none;">Settimo indirizzo email: {{ settimoindirizzoEmail }}</li><br>
+            <li v-if="ottavoIndirizzoEmail"  style="list-style-type: none;">Ottavo indirizzo email: {{ ottavoIndirizzoEmail }}</li><br>
+            <li v-if="nonoIndirizzoEmail"  style="list-style-type: none;">Nono indirizzo email: {{ nonoIndirizzoEmail }}</li><br>
+            <li v-if="decimoIndirizzoWmail"  style="list-style-type: none;">Decimo indirizzo email: {{ decimoIndirizzoWmail }}</li><br>
         </ul>
     </div>
     
