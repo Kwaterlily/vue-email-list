@@ -10,18 +10,9 @@
 </head>
 <body>
     <div id="app" class="container">
-        <ul class="row py-5">
+        <ul v-if="indirizzoEmail.length ===10" class="row py-5">
             <!-- Far comparire gli indirizzi email solamente quando sono stati tutti generati. -->
-            <li v-if="primoIndirizzoEmail" style="list-style-type: none;">Primo indirizzo email: {{ primoIndirizzoEmail }}</li><br>
-            <li v-if="secondoIndirizzoEmail" style="list-style-type: none;">Secondo indirizzo email: {{ secondoIndirizzoEmail }}</li><br>
-            <li v-if="terzoIndirizzoEmail"  style="list-style-type: none;">Terzo indirizzo email: {{ terzoIndirizzoEmail }}</li><br>
-            <li v-if="quartoIndirizzoEmail"  style="list-style-type: none;">Quarto indirizzo email: {{ quartoIndirizzoEmail }}</li><br>
-            <li v-if="quintoIndirizzoEmail"  style="list-style-type: none;">Quinto indirizzo email: {{ quintoIndirizzoEmail }}</li><br>
-            <li v-if="sestoIndirizzoEmail"  style="list-style-type: none;">Sesto indirizzo email: {{ sestoIndirizzoEmail }}</li><br>
-            <li v-if="settimoindirizzoEmail"  style="list-style-type: none;">Settimo indirizzo email: {{ settimoindirizzoEmail }}</li><br>
-            <li v-if="ottavoIndirizzoEmail"  style="list-style-type: none;">Ottavo indirizzo email: {{ ottavoIndirizzoEmail }}</li><br>
-            <li v-if="nonoIndirizzoEmail"  style="list-style-type: none;">Nono indirizzo email: {{ nonoIndirizzoEmail }}</li><br>
-            <li v-if="decimoIndirizzoWmail"  style="list-style-type: none;">Decimo indirizzo email: {{ decimoIndirizzoWmail }}</li><br>
+            <li v-for="(indirizzoEmail, index) in indirizzoEmail" style="list-style-type: none;" @key="index">email: {{ indirizzoEmail }}</li><br>
         </ul>
     </div>
     
